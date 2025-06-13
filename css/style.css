@@ -93,14 +93,15 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding-top: 60px;
+    padding-top: 120px;
+    padding-bottom: 60px;
 }
 
 .hero-content {
@@ -832,9 +833,10 @@ body {
     }
 
     .hero {
-        padding-top: 80px;
+        padding-top: 120px;
         padding-left: 15px;
         padding-right: 15px;
+        min-height: calc(100vh - 40px);
     }
 
     .hero-content {
@@ -933,7 +935,8 @@ body {
     }
 
     .hero {
-        padding-top: 70px;
+        padding-top: 100px;
+        min-height: calc(100vh - 20px);
     }
 
     .hero-title {
