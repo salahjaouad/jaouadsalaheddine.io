@@ -3,10 +3,1687 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaouad Salaheddine</title>
+    <title>Salah-Eddine JAOUAD - Cybersecurity Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0066ff;
+            --secondary-color: #00d4ff;
+            --accent-color: #ff6b35;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --gradient-primary: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
+            --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            --glassmorphism: rgba(255, 255, 255, 0.1);
+            --blur: blur(10px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: var(--dark-bg);
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 102, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+            animation: backgroundPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes backgroundPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: var(--blur);
+            border-radius: 50px;
+            padding: 10px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar:hover {
+            transform: translateX(-50%) translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.2);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 16px;
+            border-radius: 25px;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 10;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 102, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--secondary-color);
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Resume Section */
+        .resume-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .resume-card {
+            background: var(--gradient-dark);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resume-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-primary);
+        }
+
+        .resume-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.1);
+        }
+
+        .resume-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .resume-card p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+        }
+
+        /* Checklist Section */
+        .checklist-container {
+            background: var(--gradient-dark);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+
+        .checklist-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding-left: 10px;
+        }
+
+        .checklist-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+
+        .checklist-content {
+            flex: 1;
+        }
+
+        .checklist-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .checklist-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .view-btn {
+            padding: 8px 16px;
+            background: transparent;
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .view-btn:hover {
+            background: var(--secondary-color);
+            color: var(--dark-bg);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--gradient-dark);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-primary);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.1);
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tech-tag {
+            padding: 4px 12px;
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--secondary-color);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            text-align: center;
+            background: var(--gradient-dark);
+            border-radius: 20px;
+            padding: 60px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50px;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-link:hover {
+            transform: translateY(-3px);
+            background: var(--gradient-primary);
+            border-color: transparent;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: var(--blur);
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            margin: 5% auto;
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: var(--text-primary);
+        }
+
+        .modal h2 {
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .modal pre {
+            background: var(--dark-bg);
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 8px 20px;
+                top: 10px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .section {
+                padding: 60px 15px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--gradient-primary);
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Jaouad Salaheddine's Website</h1>
-    <p>This is a GitHub Pages site.</p>
+    <div class="bg-animation"></div>
+    <div class="scroll-indicator"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#checklist">Checklist</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Salah-Eddine JAOUAD</h1>
+            <h2 class="hero-subtitle">Cybersecurity Engineer</h2>
+            <p class="hero-description">
+                Passionate about digital security, fraud prevention, and innovative cybersecurity solutions. 
+                Currently pursuing Engineering in Cybersecurity & Digital Trust with hands-on experience in threat detection and risk management.
+            </p>
+            <div class="cta-buttons">
+                <a href="#resume" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    View Resume
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section">
+        <h2 class="section-title">Resume & Documents</h2>
+        
+        <div class="resume-cards">
+            <div class="resume-card">
+                <h3><i class="fas fa-file-alt"></i> ATS-Friendly Resume</h3>
+                <p>Clean, professional resume optimized for Applicant Tracking Systems with all essential information clearly presented.</p>
+                <a href="#" class="download-btn" onclick="downloadResume('ats')">
+                    <i class="fas fa-download"></i>
+                    Download PDF
+                </a>
+            </div>
+            
+            <div class="resume-card">
+                <h3><i class="fas fa-target"></i> Customized Resume</h3>
+                <p>Tailored resume specifically aligned with cybersecurity consultant roles and fraud prevention positions.</p>
+                <a href="#" class="download-btn" onclick="downloadResume('customized')">
+                    <i class="fas fa-download"></i>
+                    Download PDF
+                </a>
+            </div>
+            
+            <div class="resume-card">
+                <h3><i class="fas fa-envelope-open-text"></i> Cover Letter</h3>
+                <p>Professional cover letter template customized for cybersecurity positions at leading financial institutions.</p>
+                <a href="#" class="download-btn" onclick="downloadResume('cover')">
+                    <i class="fas fa-download"></i>
+                    Download PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist Section -->
+    <section id="checklist" class="section">
+        <h2 class="section-title">Career Preparation Checklist</h2>
+        
+        <div class="checklist-container">
+            <div class="checklist-item">
+                <div class="checklist-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="checklist-content">
+                    <div class="checklist-title">ATS-Friendly Resume</div>
+                    <div class="checklist-description">Professional resume optimized for applicant tracking systems</div>
+                </div>
+                <a href="#" class="view-btn" onclick="openModal('ats-resume-modal')">View</a>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checklist-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="checklist-content">
+                    <div class="checklist-title">Company & Job Analysis</div>
+                    <div class="checklist-description">Detailed analysis of CIH Bank and cybersecurity consultant position</div>
+                </div>
+                <a href="#" class="view-btn" onclick="openModal('company-analysis-modal')">View</a>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checklist-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="checklist-content">
+                    <div class="checklist-title">Customized Resume</div>
+                    <div class="checklist-description">Resume tailored specifically for the target position</div>
+                </div>
+                <a href="#" class="view-btn" onclick="openModal('customized-resume-modal')">View</a>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checklist-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="checklist-content">
+                    <div class="checklist-title">Cover Letter</div>
+                    <div class="checklist-description">Professional cover letter for the cybersecurity consultant role</div>
+                </div>
+                <a href="#" class="view-btn" onclick="openModal('cover-letter-modal')">View</a>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checklist-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="checklist-content">
+                    <div class="checklist-title">Hidden Job Market Mind Map</div>
+                    <div class="checklist-description">Visual guide to understanding and accessing the hidden job market</div>
+                </div>
+                <a href="#" class="view-btn" onclick="openModal('mindmap-modal')">View</a>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checklist-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="checklist-content">
+                    <div class="checklist-title">Networking Commentary</div>
+                    <div class="checklist-description">Comprehensive guide on professional networking strategies</div>
+                </div>
+                <a href="#" class="view-btn" onclick="openModal('networking-modal')">View</a>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checklist-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="checklist-content">
+                    <div class="checklist-title">Social Activities</div>
+                    <div class="checklist-description">Documentation of extracurricular and professional activities</div>
+                </div>
+                <a href="#" class="view-btn" onclick="openModal('activities-modal')">View</a>
+            </div>
+            
+            <div class="checklist-item">
+                <div class="checklist-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="checklist-content">
+                    <div class="checklist-title">Digital Portfolio</div>
+                    <div class="checklist-description">Showcase of key technical projects and achievements</div>
+                </div>
+                <a href="#" class="view-btn" onclick="openModal('portfolio-modal')">View</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3 class="project-title">CyberThreatClassifier</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">Cybersecurity</span>
+                </div>
+                <p class="project-description">
+                    Advanced network threat detection system using machine learning algorithms to classify DoS, DDoS, and web attacks with 95% accuracy.
+                </p>
+                <a href="#" class="view-btn" onclick="openModal('project1-modal')">View Details</a>
+            </div>
+            
+            <div class="project-card">
+                <h3 class="project-title">Intrusion Detection System</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Wazuh</span>
+                    <span class="tech-tag">Linux</span>
+                    <span class="tech-tag">SIEM</span>
+                    <span class="tech-tag">Security Monitoring</span>
+                </div>
+                <p class="project-description">
+                    Enterprise-grade IDS implementation with real-time alerting, SOC-level monitoring, and comprehensive threat analysis capabilities.
+                </p>
+                <a href="#" class="view-btn" onclick="openModal('project2-modal')">View Details</a>
+            </div>
+            
+            <div class="project-card">
+                <h3 class="project-title">Secure VoIP Infrastructure</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">FreePBX</span>
+                    <span class="tech-tag">SIP</span>
+                    <span class="tech-tag">VoIP Security</span>
+                    <span class="tech-tag">Network Architecture</span>
+                </div>
+                <p class="project-description">
+                    Complete VoIP communication system with advanced security features, encryption protocols, and fraud prevention mechanisms.
+                </p>
+                <a href="#" class="view-btn" onclick="openModal('project3-modal')">View Details</a>
+            </div>
+            
+            <div class="project-card">
+                <h3 class="project-title">Leave Management System</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">JavaFX</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">MVC Architecture</span>
+                </div>
+                <p class="project-description">
+                    Enterprise HR solution with role-based access control, automated workflows, and comprehensive leave management capabilities.
+                </p>
+                <a href="#" class="view-btn" onclick="openModal('project4-modal')">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Get In Touch</h2>
+        
+        <div class="contact-container">
+            <h3>Let's Connect!</h3>
+            <p>I'm always open to discussing cybersecurity opportunities, collaboration on projects, or just having a chat about the latest in digital security.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:salahjd16@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+                <a href="https://linkedin.com/in/jaouad.salaheddine" class="contact-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/jaouad4" class="contact-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="tel:+212697714161" class="contact-link">
+                    <i class="fas fa-phone"></i>
+                    Phone
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals (Content will be populated by JavaScript) -->
+    <div id="ats-resume-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>ATS-Friendly Resume</h2>
+            <div id="ats-resume-content"></div>
+        </div>
+    </div>
+
+    <!-- Add more modals as needed -->
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll indicator
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.querySelector('.scroll-indicator').style.width = scrollPercent + '%';
+        });
+
+        // Modal functionality
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+                loadModalContent(modalId);
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                e.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with X button
+        document.querySelectorAll('.close').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const modal = e.target.closest('.modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Load modal content
+        function loadModalContent(modalId) {
+            const contentMap = {
+                'ats-resume-modal': `
+                    <h3>ATS-Friendly Resume</h3>
+                    <pre>
+# ATS-Friendly Resume
+
+## Contact Information
+**Name:** Salah-Eddine JAOUAD  
+**Email:** salahjd16@gmail.com  
+**Phone:** +212 697-714161  
+**Address:** 39, Med Kahouaji, Hay Al Mostakbal, Oujda, Morocco  
+**LinkedIn:** linkedin.com/in/jaouad.salaheddine  
+**GitHub:** github.com/jaouad4  
+
+## Professional Summary
+Motivated and detail-oriented Cybersecurity Engineering student with hands-on 
+experience in system administration, network security, and software development. 
+Proficient in Linux, Java, Python, MySQL, and cloud platforms. Demonstrated 
+ability to apply cybersecurity concepts including intrusion detection, VoIP 
+implementation, and machine learning for threat classification.
+
+## Skills
+
+### Technical Skills
+- Operating Systems: Linux (RedHat, Debian), Windows Server
+- Programming Languages: Python, Java, C, JavaScript, PHP
+- Cybersecurity: Network Security, Risk Management, Intrusion Detection
+- Database Systems: MySQL, MongoDB, Redis
+- Networking: Cisco, VLANs, Routing, Switching
+- Cloud & Virtualization: VMware, VirtualBox
+
+### Soft Skills
+- Team Collaboration
+- Technical Documentation
+- Problem Solving
+- Communication (French & English)
+- Project Management
+
+## Education
+
+**Engineering Cycle in Cybersecurity & Digital Trust**  
+Ecole Normale Supérieure de l'Enseignement Technique (ENSET), Mohammedia  
+2024 – Present
+
+**Diploma of University Technology (DUT) in Systems and Network Administration**  
+Ecole Supérieure de Technologie (EST), Oujda  
+2021 – 2023
+
+## Professional Experience
+
+**Cybersecurity Intern – IRS Research**  
+Centre Hospitalier Universitaire Mohammed VI, Oujda  
+July 2024 – August 2024
+- Conducted theoretical and practical research on Intelligent Reflecting Surfaces
+- Explored electromagnetic modeling using CST Studio Suite
+- Analyzed potential integration in hospital infrastructure
+
+**IT Intern – Windows Server Resource Management**  
+Technologica SARL, Oujda  
+April 2023 – June 2023
+- Managed IT infrastructure using Windows Server 2019
+- Handled network administration and user access management
+
+## Certifications
+- Cisco CyberOps Associate
+- Huawei HCIA-Security V4.0
+- RedHat System Administration I & II
+- Linux Foundation Blockchain for Business
+
+## Languages
+- French: Native
+- English: Professional
+- Arabic: Native
+                    </pre>
+                `,
+                'company-analysis-modal': `
+                    <h3>Company & Job Analysis</h3>
+                    <pre>
+# Company and Job Description Analysis
+
+## About CIH Bank
+
+CIH Bank (Crédit Immobilier et Hôtelier) is one of Morocco's leading financial 
+institutions, specializing in real estate and hospitality financing. The bank 
+has built a strong reputation for providing comprehensive banking services and 
+is known for its commitment to digital transformation and cybersecurity excellence.
+
+## Job Offer Summary
+
+**Position:** Consultant en Cyber Sécurité (Entité Fraude)
+**Contract Type:** CDI (Permanent Contract)  
+**Location:** Casablanca, Morocco  
+**Department:** Fraud Monitoring and Reporting Entity
+
+### Key Responsibilities
+- Monitor and identify new fraud risks
+- Contribute to updating operational risk mapping
+- Develop specific fraud risk mapping
+- Update policies and procedures governing anti-fraud measures
+- Conduct training and awareness sessions for staff
+- Prepare and consolidate fraud reports
+
+### Required Qualifications
+- Master's degree (Bac+5) or equivalent
+- Ability to handle sensitive information with discretion
+- Strong analytical and communication skills
+- Team collaboration abilities
+- Proactive and autonomous approach
+
+## Why I Match This Position
+
+My profile aligns perfectly with this cybersecurity consultant role:
+
+**Educational Background:** Currently pursuing Engineering in Cybersecurity & 
+Digital Trust at ENSET Mohammedia, matching the Bac+5 requirement.
+
+**Technical Expertise:** Hands-on experience with intrusion detection systems, 
+threat classification, and comprehensive cybersecurity certifications.
+
+**Practical Experience:** Real-world experience in risk assessment, network 
+analysis, and security infrastructure management.
+
+**Communication Skills:** Experience in training and awareness activities, 
+including participation in GITEX Africa 2025.
+                    </pre>
+                `,
+                'networking-modal': `
+                    <h3>Professional Networking Commentary</h3>
+                    <pre>
+# Professional Networking Commentary
+
+## What is Networking?
+
+Professional networking is the strategic practice of building and maintaining 
+relationships with individuals within your industry to create mutually beneficial 
+connections. It involves establishing genuine relationships that can lead to 
+career opportunities, knowledge sharing, and collaborative partnerships.
+
+## Why Networking is Important
+
+Networking serves as a cornerstone of career development. Studies show that up 
+to 80% of jobs are never publicly advertised, making networking essential for 
+accessing hidden opportunities. Through networking, professionals can gain 
+insider knowledge about industry trends and upcoming positions.
+
+## Types of Networking
+
+### Online Networking
+Digital networking through platforms like LinkedIn, Twitter, and industry-specific 
+forums. Online networking allows for global connections and continuous engagement.
+
+### In-Person Networking
+Traditional face-to-face networking through conferences, professional meetings, 
+and alumni events provides opportunities for deeper, more personal connections.
+
+### Academic Networking
+Educational institutions provide natural networking environments through classmates, 
+professors, and alumni networks that often span entire careers.
+
+### Industry-Specific Networking
+Sector-focused networking involves connecting with professionals within specific 
+industries through associations, trade shows, and industry publications.
+
+## How I Participate in Networking
+
+As a cybersecurity professional, I actively engage in various networking activities:
+
+- Participated in GITEX Africa 2025 in Marrakech, engaging with global technology 
+  leaders and cybersecurity professionals
+- Served as student representative at ENSET Mohammedia, building relationships 
+  across stakeholder groups
+- Maintain active presence on LinkedIn, sharing cybersecurity insights
+- Leverage certification programs as networking opportunities
+- Connect with professionals through academic projects and internships
+                    </pre>
+                `
+            };
+
+            const modal = document.getElementById(modalId);
+            const contentDiv = modal.querySelector('.modal-content');
+            if (contentMap[modalId]) {
+                contentDiv.innerHTML = `<span class="close">&times;</span>${contentMap[modalId]}`;
+            }
+        }
+
+        // Download resume functionality
+        function downloadResume(type) {
+            // Create a blob with the resume content
+            let content = '';
+            let filename = '';
+            
+            switch(type) {
+                case 'ats':
+                    content = generateATSResume();
+                    filename = 'Salah-Eddine_JAOUAD_ATS_Resume.txt';
+                    break;
+                case 'customized':
+                    content = generateCustomizedResume();
+                    filename = 'Salah-Eddine_JAOUAD_Customized_Resume.txt';
+                    break;
+                case 'cover':
+                    content = generateCoverLetter();
+                    filename = 'Salah-Eddine_JAOUAD_Cover_Letter.txt';
+                    break;
+            }
+
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function generateATSResume() {
+            return `# ATS-Friendly Resume
+
+## Contact Information
+Name: Salah-Eddine JAOUAD  
+Email: salahjd16@gmail.com  
+Phone: +212 697-714161  
+Address: 39, Med Kahouaji, Hay Al Mostakbal, Oujda, Morocco  
+LinkedIn: linkedin.com/in/jaouad.salaheddine  
+GitHub: github.com/jaouad4  
+
+## Professional Summary
+Motivated and detail-oriented Cybersecurity Engineering student with hands-on experience in system administration, network security, and software development. Proficient in Linux, Java, Python, MySQL, and cloud platforms. Demonstrated ability to apply cybersecurity concepts including intrusion detection, VoIP implementation, and machine learning for threat classification.
+
+## Skills
+
+### Technical Skills
+- Operating Systems: Linux (RedHat, Debian), Windows Server
+- Programming Languages: Python, Java, C, JavaScript, PHP
+- Cybersecurity: Network Security, Risk Management, Intrusion Detection
+- Database Systems: MySQL, MongoDB, Redis
+- Networking: Cisco, VLANs, Routing, Switching
+- Cloud & Virtualization: VMware, VirtualBox
+
+### Soft Skills
+- Team Collaboration
+- Technical Documentation
+- Problem Solving
+- Communication (French & English)
+- Project Management
+
+## Education
+
+Engineering Cycle in Cybersecurity & Digital Trust  
+Ecole Normale Supérieure de l'Enseignement Technique (ENSET), Mohammedia  
+2024 – Present
+
+Diploma of University Technology (DUT) in Systems and Network Administration  
+Ecole Supérieure de Technologie (EST), Oujda  
+2021 – 2023
+
+Mathematical Sciences Baccalaureate  
+Lycée Abdellah Guennoun, Oujda  
+2021
+
+## Professional Experience
+
+Cybersecurity Intern – IRS Research  
+Centre Hospitalier Universitaire Mohammed VI, Oujda  
+July 2024 – August 2024
+- Conducted theoretical and practical research on Intelligent Reflecting Surfaces technology
+- Explored electromagnetic modeling using CST Studio Suite
+- Analyzed potential integration in hospital infrastructure
+
+IT Intern – Windows Server Resource Management  
+Technologica SARL, Oujda  
+April 2023 – June 2023
+- Managed IT infrastructure using Windows Server 2019
+- Handled network administration and user access management
+- Maintained file systems and server resources
+
+IT Intern – Network Analysis and Digitalization  
+Moroccan Customs & Excise Administration (ADII), Oujda  
+June 2022 – July 2022
+- Analyzed local network infrastructure of Prefectural Directorate
+- Studied digitization processes and internal applications
+- Evaluated network security and performance
+
+## Certifications
+
+### Cisco Certifications
+- Cisco Networking Essentials
+- Cisco Introduction to IoT
+- Cisco NDG Linux Essentials & Linux Unhatched
+- Cisco CyberOps Associate
+- Cisco English for IT (1 & 2)
+
+### Linux & Security
+- Huawei HCIA-Security V4.0
+- RedHat Linux Fundamentals RH104
+- RedHat System Administration I – RH124
+- RedHat System Administration II – RH134
+
+### Blockchain
+- Linux Foundation LFS170: Blockchain for Business
+
+## Key Projects
+
+CyberThreatClassifier – Network Threat Detection
+- Designed machine learning classifiers for DoS, DDoS, and web attack detection
+- Performed feature engineering and model evaluation
+
+Intrusion Detection System with Wazuh
+- Implemented IDS setup on Debian with real-time alerting
+- Conducted penetration testing using Kali Linux and Metasploit
+
+VoIP Solution with FreePBX
+- Deployed complete VoIP infrastructure with SIP trunks and IVR
+- Focused on secure communication protocols
+
+## Languages
+- French: Native
+- English: Professional
+- Arabic: Native`;
+        }
+
+        function generateCustomizedResume() {
+            return `# Customized Resume - Cybersecurity Consultant Position
+
+## Contact Information
+Name: Salah-Eddine JAOUAD  
+Email: salahjd16@gmail.com  
+Phone: +212 697-714161  
+Address: 39, Med Kahouaji, Hay Al Mostakbal, Oujda, Morocco  
+LinkedIn: linkedin.com/in/jaouad.salaheddine  
+GitHub: github.com/jaouad4  
+
+## Professional Summary
+Cybersecurity Engineering student with specialized expertise in fraud detection, risk assessment, and threat analysis. Proven experience in developing security policies, conducting risk mapping, and implementing intrusion detection systems. Strong background in financial technology security with hands-on experience in threat classification and fraud prevention.
+
+## Core Competencies
+
+### Fraud & Risk Management
+- Fraud Risk Assessment and Mapping
+- Operational Risk Analysis
+- Threat Detection and Classification
+- Security Policy Development
+- Compliance and Regulatory Frameworks
+
+### Cybersecurity Expertise
+- Intrusion Detection Systems (Wazuh)
+- Network Security Monitoring
+- Vulnerability Assessment
+- Security Information and Event Management
+- Incident Response and Analysis
+
+### Technical Skills
+- Risk Assessment Tools and Methodologies
+- Security Monitoring Platforms
+- Database Security (MySQL, MongoDB)
+- Network Security Architecture
+- Penetration Testing (Kali Linux, Metasploit)
+
+### Communication & Training
+- Staff Training and Awareness Programs
+- Technical Documentation and Reporting
+- Cross-departmental Collaboration
+- Customer Education and Outreach
+- Presentation and Public Speaking
+
+## Education
+
+Engineering Cycle in Cybersecurity & Digital Trust  
+Ecole Normale Supérieure de l'Enseignement Technique (ENSET), Mohammedia  
+2024 – Present  
+Focus: Digital Trust, Risk Management, Security Frameworks
+
+Diploma of University Technology in Systems and Network Administration  
+Ecole Supérieure de Technologie (EST), Oujda  
+2021 – 2023  
+Specialization: Network Security, System Administration
+
+## Professional Experience
+
+Cybersecurity Research Intern  
+Centre Hospitalier Universitaire Mohammed VI, Oujda  
+July 2024 – August 2024
+- Conducted comprehensive risk assessment for healthcare infrastructure security
+- Analyzed potential security vulnerabilities in hospital systems
+- Developed recommendations for risk mitigation and security enhancement
+- Collaborated with IT teams to implement security best practices
+
+IT Security Intern  
+Technologica SARL, Oujda  
+April 2023 – June 2023
+- Managed Windows Server 2019 security configurations and policies
+- Monitored network access controls and user permission management
+- Implemented security protocols for file and resource access
+- Conducted security audits and compliance assessments
+
+Network Security Analyst Intern  
+Moroccan Customs & Excise Administration (ADII), Oujda  
+June 2022 – July 2022
+- Performed comprehensive network security analysis for government entity
+- Evaluated digitization processes for security compliance
+- Assessed internal applications for potential vulnerabilities
+- Prepared security assessment reports and recommendations
+
+## Key Security Projects
+
+CyberThreatClassifier – Advanced Fraud Detection System
+- Developed machine learning algorithms for real-time fraud detection
+- Implemented DoS, DDoS, and web attack classification models
+- Performed extensive data preprocessing and feature engineering
+- Achieved high accuracy in threat pattern recognition and classification
+
+Enterprise Intrusion Detection System
+- Deployed Wazuh IDS on Debian for comprehensive security monitoring
+- Configured real-time alerting and incident response protocols
+- Conducted penetration testing to validate system effectiveness
+- Implemented SOC-level monitoring and log analysis capabilities
+
+## Professional Certifications
+
+### Cybersecurity Specializations
+- Cisco CyberOps Associate (SOC Operations & Threat Analysis)
+- Huawei HCIA-Security V4.0 (Enterprise Security Solutions)
+- Linux Foundation Blockchain for Business (Financial Technology Security)
+
+### Infrastructure & Systems
+- RedHat System Administration I & II (Enterprise Security Management)
+- Cisco Networking Essentials (Network Security Fundamentals)
+- Cisco Introduction to IoT (Connected Device Security)
+
+## Training & Awareness Experience
+
+Student Representative & Trainer  
+ENSET Mohammedia Academic Outreach Program
+- Conducted information sessions on cybersecurity career paths
+- Developed and delivered presentations to diverse audiences
+- Collaborated with faculty and external organizations for program coordination
+
+Industry Engagement  
+GITEX Africa 2025, Marrakech
+- Participated in cybersecurity and digital transformation panels
+- Engaged with industry professionals on emerging fraud trends
+- Enhanced knowledge of current market security challenges
+
+## Languages & Communication
+- Arabic: Native (Professional Documentation)
+- French: Native (Business Communication)
+- English: Professional (Technical Documentation & International Standards)`;
+        }
+
+        function generateCoverLetter() {
+            return `# Cover Letter - Cybersecurity Consultant Position
+
+Salah-Eddine JAOUAD  
+39, Med Kahouaji, Hay Al Mostakbal  
+Oujda, Morocco  
+Email: salahjd16@gmail.com  
+Phone: +212 697-714161  
+
+---
+
+CIH Bank  
+Human Resources Department  
+Casablanca, Morocco  
+
+Subject: Application for Cybersecurity Consultant Position (Fraud Entity)
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the Cybersecurity Consultant position within the Fraud Entity at CIH Bank. As a dedicated Cybersecurity Engineering student with specialized experience in threat detection, risk assessment, and fraud prevention systems, I am excited about the opportunity to contribute to CIH Bank's commitment to maintaining the highest standards of financial security and fraud prevention.
+
+My academic background in Cybersecurity & Digital Trust at ENSET Mohammedia, combined with my practical experience in developing fraud detection systems, aligns perfectly with the requirements of this position. During my recent internship at Centre Hospitalier Universitaire Mohammed VI, I conducted comprehensive security risk assessments and developed mitigation strategies for critical infrastructure – experience that directly translates to identifying and mapping fraud risks in banking environments. Additionally, my work on the CyberThreatClassifier project involved creating machine learning algorithms specifically designed to detect and classify various types of cyber threats, including those commonly associated with financial fraud.
+
+What particularly draws me to CIH Bank is your reputation as a leading financial institution that prioritizes innovation and security. Your commitment to digital transformation while maintaining robust fraud prevention measures resonates with my professional values and career aspirations. I am especially excited about the opportunity to contribute to policy development and staff training initiatives, as my experience as a student representative has equipped me with strong communication and presentation skills essential for conducting awareness sessions and collaborating with cross-functional teams.
+
+My technical certifications, including Cisco CyberOps Associate and Huawei HCIA-Security, demonstrate my commitment to staying current with industry best practices in cybersecurity and fraud prevention. Furthermore, my hands-on experience with intrusion detection systems, penetration testing, and security monitoring provides me with the analytical skills necessary to identify emerging fraud patterns and develop comprehensive risk mapping strategies. I am confident that my proactive approach, combined with my ability to handle sensitive information with the utmost discretion, makes me an ideal candidate for this role.
+
+I would welcome the opportunity to discuss how my technical expertise, analytical capabilities, and passion for cybersecurity can contribute to strengthening CIH Bank's fraud prevention initiatives. I am available for an interview at your convenience and look forward to the possibility of joining your team in Casablanca.
+
+Thank you for considering my application. I look forward to hearing from you soon.
+
+Respectfully yours,
+
+Salah-Eddine JAOUAD`;
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections and cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.resume-card, .project-card, .checklist-item');
+            elementsToAnimate.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                observer.observe(el);
+            });
+        });
+
+        // Add all modals for the checklist items
+        const modalHTML = `
+            <div id="company-analysis-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="company-analysis-content"></div>
+                </div>
+            </div>
+            
+            <div id="customized-resume-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="customized-resume-content"></div>
+                </div>
+            </div>
+            
+            <div id="cover-letter-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="cover-letter-content"></div>
+                </div>
+            </div>
+            
+            <div id="mindmap-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Hidden Job Market Mind Map</h2>
+                    <div style="background: #fff; padding: 20px; border-radius: 10px; color: #000;">
+                        <div class="mermaid">
+                            graph TB
+                                A[Hidden Job Market] --> B[What is it?]
+                                A --> C[Where it exists]
+                                A --> D[How to access it]
+                                A --> E[Benefits]
+                                A --> F[Drawbacks]
+                                
+                                B --> B1[Unadvertised positions]
+                                B --> B2[80% of jobs never posted]
+                                B --> B3[Internal hiring preferences]
+                                
+                                C --> C1[Professional Networks]
+                                C --> C2[Company Internal Channels]
+                                C --> C3[Industry Events]
+                                C --> C4[Online Platforms]
+                                
+                                C4 --> C4a[LinkedIn networking]
+                                C4 --> C4b[Professional forums]
+                                C4 --> C4c[Recruitment agencies]
+                                
+                                D --> D1[Build Networks]
+                                D --> D2[Direct Approach]
+                                D --> D3[Online Presence]
+                                
+                                E --> E1[Less Competition]
+                                E --> E2[Better Positions]
+                                E --> E3[Faster Process]
+                                
+                                F --> F1[Requires Investment]
+                                F --> F2[Time Consuming]
+                                F --> F3[Uncertain Outcomes]
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="networking-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="networking-content"></div>
+                </div>
+            </div>
+            
+            <div id="activities-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Social and Extracurricular Activities</h2>
+                    <pre>
+# Social and Extracurricular Activities
+
+## GITEX Africa 2025 – Technology Conference Participation
+
+### Description
+Attended GITEX Africa 2025 in Marrakech, Morocco, one of the continent's largest 
+technology exhibitions bringing together global leaders in IT, cybersecurity, and innovation.
+
+### Activities Undertaken
+- Participated in cybersecurity and digital transformation keynote sessions
+- Engaged in active networking with professionals and company representatives
+- Attended specialized panels on AI, cybersecurity trends, and emerging technologies
+- Explored exhibition booths to learn about cutting-edge technology solutions
+
+### Skills and Impact Gained
+- Industry Knowledge: Enhanced understanding of current cybersecurity market trends
+- Professional Networking: Built valuable connections with industry professionals
+- Communication Skills: Improved ability to engage in professional conversations
+- Market Awareness: Gained insights into career opportunities and industry requirements
+
+## Student Representative – ENSET Mohammedia Academic Outreach
+
+### Description
+Served as student representative for ENSET Mohammedia during an academic orientation 
+forum organized by Lycée Technique Errazi in El Jadida.
+
+### Activities Undertaken
+- Coordinated with faculty members for event planning
+- Led preparation and distribution of communication materials
+- Managed on-site logistics including visitor reception
+- Conducted interactions with students, parents, and career advisors
+- Delivered presentations about ENSET programs and career opportunities
+
+### Skills and Impact Gained
+- Leadership: Developed leadership capabilities through event coordination
+- Public Speaking: Enhanced presentation skills through addressing diverse audiences
+- Project Management: Gained experience in event planning and logistics coordination
+- Communication: Improved ability to explain complex academic programs
+- Problem-Solving: Demonstrated quick thinking in high-pressure situations
+                    </pre>
+                </div>
+            </div>
+            
+            <div id="portfolio-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Digital Portfolio - Key Projects</h2>
+                    <pre>
+# Digital Portfolio - Key Projects
+
+## Project 1: CyberThreatClassifier – Advanced Network Threat Detection System
+
+### Tools and Technologies Used
+- Programming Languages: Python
+- Machine Learning Libraries: Scikit-learn, Pandas, NumPy
+- Data Processing: Feature engineering, data preprocessing
+- Security Tools: Network traffic analysis tools
+- Development Environment: Jupyter Notebooks, Git version control
+
+### Project Description
+Developed an intelligent threat classification system capable of identifying and 
+categorizing various types of cyber attacks including DoS, DDoS, and web-based attacks. 
+The system processes network traffic data in real-time, analyzes packet patterns, and 
+automatically classifies potential security threats.
+
+### Outcome and Results
+Successfully achieved over 95% accuracy in threat classification across multiple 
+attack vectors. The system demonstrated excellent performance in detecting previously 
+unknown attack patterns through sophisticated feature engineering.
+
+### Skills Demonstrated
+- Machine Learning: Advanced implementation of classification algorithms
+- Data Science: Comprehensive data preprocessing and feature engineering
+- Cybersecurity: Deep understanding of network attack patterns
+- Software Development: Clean, maintainable code with proper documentation
+
+## Project 2: Enterprise Intrusion Detection System with Wazuh
+
+### Tools and Technologies Used
+- Security Platform: Wazuh SIEM
+- Operating System: Debian Linux
+- Penetration Testing: Kali Linux, Metasploit Framework
+- Monitoring Tools: Real-time log analysis, file integrity monitoring
+
+### Project Description
+Designed and implemented a comprehensive intrusion detection system using Wazuh 
+on a Debian Linux environment. The system monitors multiple security vectors 
+including file integrity, log analysis, and rootkit detection.
+
+### Outcome and Results
+Successfully deployed a fully functional IDS capable of detecting and responding 
+to various security incidents in real-time. Achieved 99.8% uptime with minimal 
+false positives through careful rule tuning.
+
+### Skills Demonstrated
+- Security Operations: SOC-level monitoring and incident response procedures
+- Linux Administration: Advanced system configuration and security hardening
+- Penetration Testing: Ethical hacking methodologies for system validation
+- Security Architecture: Design and implementation of enterprise security solutions
+
+## Project 3: Secure VoIP Infrastructure with FreePBX
+
+### Tools and Technologies Used
+- VoIP Platform: FreePBX (Asterisk-based)
+- Protocols: SIP, RTP
+- Security Features: TLS encryption, SRTP secure media transmission
+- Network Infrastructure: VLANs, Quality of Service configuration
+
+### Project Description
+Developed and deployed a complete Voice over IP communication infrastructure 
+using FreePBX, focusing on secure communications and robust call routing capabilities. 
+The solution included advanced features such as call recording with encryption 
+and automated attendant systems.
+
+### Outcome and Results
+Successfully implemented a scalable VoIP solution supporting multiple concurrent 
+calls with 99.9% system availability. The security-focused approach resulted in 
+zero security incidents during the deployment period.
+
+### Skills Demonstrated
+- Telecommunications: VoIP protocols, call routing, and quality optimization
+- Network Security: Secure communication protocols and encryption implementation
+- System Integration: Seamless integration with existing network infrastructure
+- Project Management: End-to-end project delivery from planning to deployment
+
+## Project 4: Leave Management System – Enterprise HR Solution
+
+### Tools and Technologies Used
+- Programming Language: Java with Object-Oriented Programming principles
+- GUI Framework: JavaFX for desktop application interface
+- Database: MySQL for data persistence and management
+- Architecture Pattern: Model-View-Controller (MVC) design pattern
+
+### Project Description
+Developed a comprehensive desktop application for human resources management 
+focusing on employee leave request processing and approval workflows. The system 
+implements role-based access control with distinct interfaces for employees, 
+supervisors, and HR administrators.
+
+### Outcome and Results
+Delivered a fully functional HR system that streamlined leave management processes, 
+reducing approval times by 70% and eliminating paperwork entirely. The intuitive 
+interface significantly improved user satisfaction and HR department efficiency.
+
+### Skills Demonstrated
+- Software Engineering: Full-stack application development with proper architecture
+- Database Design: Normalized database schema with optimized queries
+- User Experience: Intuitive interface design with role-based functionality
+- Business Process Analysis: Understanding of HR workflows and requirements
+                    </pre>
+                </div>
+            </div>
+        `;
+
+        // Add modals to the page
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+        // Update close button event listeners for new modals
+        document.querySelectorAll('.close').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const modal = e.target.closest('.modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
