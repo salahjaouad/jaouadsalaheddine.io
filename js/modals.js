@@ -128,13 +128,13 @@ function generateATSResumeContent() {
                 <button class="btn btn-primary" onclick="downloadResume('ats')">
                     <i class="fas fa-download"></i> Download PDF
                 </button>
-                <button class="btn btn-secondary" onclick="openPDFInNewTab('../../Checklist/ATS Resume.pdf')">
+                <button class="btn btn-secondary" onclick="openPDFInNewTab('assets/documents/resumes/ATS Resume.pdf')">
                     <i class="fas fa-external-link-alt"></i> Open in New Tab
                 </button>
             </div>
             <div class="pdf-viewer">
-                <iframe src="../../Checklist/ATS Resume.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
-                    <p>Your browser does not support PDFs. <a href="../../Checklist/ATS Resume.pdf" target="_blank">Download the PDF</a>.</p>
+                <iframe src="assets/documents/resumes/ATS Resume.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
+                    <p>Your browser does not support PDFs. <a href="assets/documents/resumes/ATS Resume.pdf" target="_blank">Download the PDF</a>.</p>
                 </iframe>
             </div>
         </div>
@@ -146,16 +146,16 @@ function generateCompanyAnalysisContent() {
         <div class="modal-section">
             <h2><i class="fas fa-building"></i> Company & Job Analysis</h2>
             <div class="resume-actions">
-                <button class="btn btn-primary" onclick="openPDFInNewTab('../../Checklist/Company and Job Description Analysis.pdf')">
+                <button class="btn btn-primary" onclick="openPDFInNewTab('assets/documents/resumes/Company and Job Description Analysis.pdf')">
                     <i class="fas fa-external-link-alt"></i> Open PDF in New Tab
                 </button>
-                <button class="btn btn-secondary" onclick="downloadPDFFile('../../Checklist/Company and Job Description Analysis.pdf', 'Company_Job_Analysis.pdf')">
+                <button class="btn btn-secondary" onclick="downloadPDFFile('assets/documents/resumes/Company and Job Description Analysis.pdf', 'Company_Job_Analysis.pdf')">
                     <i class="fas fa-download"></i> Download PDF
                 </button>
             </div>
             <div class="pdf-viewer">
-                <iframe src="../../Checklist/Company and Job Description Analysis.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
-                    <p>Your browser does not support PDFs. <a href="../../Checklist/Company and Job Description Analysis.pdf" target="_blank">Download the PDF</a>.</p>
+                <iframe src="assets/documents/resumes/Company and Job Description Analysis.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
+                    <p>Your browser does not support PDFs. <a href="assets/documents/resumes/Company and Job Description Analysis.pdf" target="_blank">Download the PDF</a>.</p>
                 </iframe>
             </div>
         </div>
@@ -170,13 +170,13 @@ function generateCustomizedResumeContent() {
                 <button class="btn btn-primary" onclick="downloadResume('customized')">
                     <i class="fas fa-download"></i> Download PDF
                 </button>
-                <button class="btn btn-secondary" onclick="openPDFInNewTab('../../Checklist/Customized Resume - Cybersecurity Consultant Position.pdf')">
+                <button class="btn btn-secondary" onclick="openPDFInNewTab('assets/documents/resumes/Customized Resume - Cybersecurity Consultant Position.pdf')">
                     <i class="fas fa-external-link-alt"></i> Open in New Tab
                 </button>
             </div>
             <div class="pdf-viewer">
-                <iframe src="../../Checklist/Customized Resume - Cybersecurity Consultant Position.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
-                    <p>Your browser does not support PDFs. <a href="../../Checklist/Customized Resume - Cybersecurity Consultant Position.pdf" target="_blank">Download the PDF</a>.</p>
+                <iframe src="assets/documents/resumes/Customized Resume - Cybersecurity Consultant Position.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
+                    <p>Your browser does not support PDFs. <a href="assets/documents/resumes/Customized Resume - Cybersecurity Consultant Position.pdf" target="_blank">Download the PDF</a>.</p>
                 </iframe>
             </div>
         </div>
@@ -191,13 +191,13 @@ function generateCoverLetterContent() {
                 <button class="btn btn-primary" onclick="downloadResume('cover')">
                     <i class="fas fa-download"></i> Download PDF
                 </button>
-                <button class="btn btn-secondary" onclick="openPDFInNewTab('../../Checklist/Cover Letter - Cybersecurity Consultant Position.pdf')">
+                <button class="btn btn-secondary" onclick="openPDFInNewTab('assets/documents/resumes/Cover Letter - Cybersecurity Consultant Position.pdf')">
                     <i class="fas fa-external-link-alt"></i> Open in New Tab
                 </button>
             </div>
             <div class="pdf-viewer">
-                <iframe src="../../Checklist/Cover Letter - Cybersecurity Consultant Position.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
-                    <p>Your browser does not support PDFs. <a href="../../Checklist/Cover Letter - Cybersecurity Consultant Position.pdf" target="_blank">Download the PDF</a>.</p>
+                <iframe src="assets/documents/resumes/Cover Letter - Cybersecurity Consultant Position.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
+                    <p>Your browser does not support PDFs. <a href="assets/documents/resumes/Cover Letter - Cybersecurity Consultant Position.pdf" target="_blank">Download the PDF</a>.</p>
                 </iframe>
             </div>
         </div>
@@ -209,10 +209,10 @@ function generateMindMapContent() {
         <div class="modal-section">
             <h2><i class="fas fa-sitemap"></i> Hidden Job Market Mind Map</h2>
             <div class="resume-actions">
-                <button class="btn btn-primary" onclick="downloadPDFFile('../../Checklist/Hidden Job Market Mind Map.png', 'Hidden_Job_Market_Mind_Map.png')">
+                <button class="btn btn-primary" onclick="downloadPDFFile('assets/images/activities/Hidden Job Market Mind Map.png', 'Hidden_Job_Market_Mind_Map.png')">
                     <i class="fas fa-download"></i> Download Image
                 </button>
-                <button class="btn btn-secondary" onclick="openPDFInNewTab('../../Checklist/Hidden Job Market Mind Map.png')">
+                <button class="btn btn-secondary" onclick="openPDFInNewTab('assets/images/activities/Hidden Job Market Mind Map.png')">
                     <i class="fas fa-external-link-alt"></i> Open in New Tab
                 </button>
             </div>
@@ -221,7 +221,7 @@ function generateMindMapContent() {
                     <p>This comprehensive mind map illustrates the concept of the hidden job market and strategic approaches to access these opportunities:</p>
                 </div>
                 <div class="mindmap-visual">
-                    <img src="../../Checklist/Hidden Job Market Mind Map.png" alt="Hidden Job Market Mind Map" 
+                    <img src="assets/images/activities/Hidden Job Market Mind Map.png" alt="Hidden Job Market Mind Map" 
                          style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                 </div>
                 <div class="mindmap-insights">
@@ -259,16 +259,16 @@ function generateNetworkingContent() {
         <div class="modal-section">
             <h2><i class="fas fa-network-wired"></i> Professional Networking Commentary</h2>
             <div class="resume-actions">
-                <button class="btn btn-primary" onclick="openPDFInNewTab('../../Checklist/Commentary on Professional Networking.pdf')">
+                <button class="btn btn-primary" onclick="openPDFInNewTab('assets/documents/resumes/Commentary on Professional Networking.pdf')">
                     <i class="fas fa-external-link-alt"></i> Open PDF in New Tab
                 </button>
-                <button class="btn btn-secondary" onclick="downloadPDFFile('../../Checklist/Commentary on Professional Networking.pdf', 'Professional_Networking_Commentary.pdf')">
+                <button class="btn btn-secondary" onclick="downloadPDFFile('assets/documents/resumes/Commentary on Professional Networking.pdf', 'Professional_Networking_Commentary.pdf')">
                     <i class="fas fa-download"></i> Download PDF
                 </button>
             </div>
             <div class="pdf-viewer">
-                <iframe src="../../Checklist/Commentary on Professional Networking.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
-                    <p>Your browser does not support PDFs. <a href="../../Checklist/Commentary on Professional Networking.pdf" target="_blank">Download the PDF</a>.</p>
+                <iframe src="assets/documents/resumes/Commentary on Professional Networking.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
+                    <p>Your browser does not support PDFs. <a href="assets/documents/resumes/Commentary on Professional Networking.pdf" target="_blank">Download the PDF</a>.</p>
                 </iframe>
             </div>
         </div>
@@ -280,16 +280,16 @@ function generateActivitiesContent() {
         <div class="modal-section">
             <h2><i class="fas fa-calendar-check"></i> Social & Extracurricular Activities</h2>
             <div class="resume-actions">
-                <button class="btn btn-primary" onclick="openPDFInNewTab('../../Checklist/Social and Extracurricular Activities.pdf')">
+                <button class="btn btn-primary" onclick="openPDFInNewTab('assets/documents/resumes/Social and Extracurricular Activities.pdf')">
                     <i class="fas fa-external-link-alt"></i> Open PDF in New Tab
                 </button>
-                <button class="btn btn-secondary" onclick="downloadPDFFile('../../Checklist/Social and Extracurricular Activities.pdf', 'Social_Extracurricular_Activities.pdf')">
+                <button class="btn btn-secondary" onclick="downloadPDFFile('assets/documents/resumes/Social and Extracurricular Activities.pdf', 'Social_Extracurricular_Activities.pdf')">
                     <i class="fas fa-download"></i> Download PDF
                 </button>
             </div>
             <div class="pdf-viewer">
-                <iframe src="../../Checklist/Social and Extracurricular Activities.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
-                    <p>Your browser does not support PDFs. <a href="../../Checklist/Social and Extracurricular Activities.pdf" target="_blank">Download the PDF</a>.</p>
+                <iframe src="assets/documents/resumes/Social and Extracurricular Activities.pdf" width="100%" height="600px" style="border: none; border-radius: 8px;">
+                    <p>Your browser does not support PDFs. <a href="assets/documents/resumes/Social and Extracurricular Activities.pdf" target="_blank">Download the PDF</a>.</p>
                 </iframe>
             </div>
         </div>
@@ -448,7 +448,7 @@ function generateProject3Content() {
         <div class="modal-section">
             <h2><i class="fas fa-phone"></i> Secure VoIP Infrastructure</h2>
             <div class="project-detailed">
-                <img src="Secure VoIP Infrastructure.png" alt="VoIP Infrastructure" class="project-hero-image" style="width: 100%; max-width: 600px; border-radius: 10px; margin-bottom: 20px;">
+                <img src="assets/images/projects/Secure VoIP Infrastructure.png" alt="VoIP Infrastructure" class="project-hero-image" style="width: 100%; max-width: 600px; border-radius: 10px; margin-bottom: 20px;">
                 
                 <div class="project-overview">
                     <h3>Project Overview</h3>
