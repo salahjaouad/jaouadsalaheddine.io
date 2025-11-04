@@ -14,6 +14,20 @@ function initializePortfolio() {
     addParticleEffect();
 }
 
+function getNavigationHeight() {
+    const navbar = document.querySelector('.navbar');
+    return navbar ? navbar.offsetHeight : 80;
+}
+
+const SECTION_SCROLL_GAP = 24;
+
+function getSectionScrollOffset(element) {
+    if (!element) return getNavigationHeight();
+    const navHeight = getNavigationHeight();
+    const paddingTop = parseFloat(window.getComputedStyle(element).paddingTop) || 0;
+    return SECTION_SCROLL_GAP + navHeight - paddingTop;
+}
+
 // Smooth scrolling for navigation links
 function setupSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -21,8 +35,8 @@ function setupSmoothScrolling() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const navbarHeight = 80;
-                const targetPosition = target.offsetTop - navbarHeight;
+                const offset = getSectionScrollOffset(target);
+                const targetPosition = Math.max(target.offsetTop - offset, 0);
                 
                 window.scrollTo({
                     top: targetPosition,
@@ -60,10 +74,10 @@ function setupScrollIndicator() {
 // Update active section based on scroll position
 function updateActiveSectionOnScroll() {
     const sections = document.querySelectorAll('section[id]');
-    const navbarHeight = 80;
     
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - navbarHeight - 50;
+        const offset = getSectionScrollOffset(section);
+        const sectionTop = section.offsetTop - offset - 30;
         const sectionHeight = section.offsetHeight;
         const scrollPosition = window.pageYOffset;
         
@@ -98,7 +112,7 @@ function setupScrollRevealAnimations() {
 
     // Observe elements for animation
     const elementsToAnimate = document.querySelectorAll(
-        '.resume-card, .project-card, .checklist-item, .contact-link'
+        '.resume-card, .skill-category, .project-card, .certification-card, .activity-card, .checklist-item, .contact-link'
     );
     
     elementsToAnimate.forEach(el => {

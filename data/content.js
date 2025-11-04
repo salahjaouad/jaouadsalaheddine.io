@@ -1,50 +1,14 @@
 // Content data for the portfolio website
 
-window.checklistData = [
-    {
-        title: "ATS-Friendly Resume",
-        description: "Professional resume optimized for applicant tracking systems",
-        modalId: "ats-resume-modal"
-    },
-    {
-        title: "Company & Job Analysis",
-        description: "Detailed analysis of CIH Bank and cybersecurity consultant position",
-        modalId: "company-analysis-modal"
-    },
-    {
-        title: "Customized Resume",
-        description: "Resume tailored specifically for the target position",
-        modalId: "customized-resume-modal"
-    },
-    {
-        title: "Cover Letter",
-        description: "Professional cover letter for the cybersecurity consultant role",
-        modalId: "cover-letter-modal"
-    },
-    {
-        title: "Hidden Job Market Mind Map",
-        description: "Visual guide to understanding and accessing the hidden job market",
-        modalId: "mindmap-modal"
-    },
-    {
-        title: "Networking Commentary",
-        description: "Comprehensive guide on professional networking strategies",
-        modalId: "networking-modal"
-    },
-    {
-        title: "Social Activities",
-        description: "Documentation of extracurricular and professional activities",
-        modalId: "activities-modal"
-    }
-];
+window.checklistData = [];
 
 window.personalInfo = {
     name: "Salah-Eddine JAOUAD",
-    title: "Cybersecurity Engineer",
+    title: "Cybersecurity & Digital Trust Engineer",
     email: "salahjd16@gmail.com",
     phone: "+212 697-714161",
     location: "Oujda, Morocco",
-    linkedin: "https://linkedin.com/in/jaouad.salaheddine",
+    linkedin: "https://www.linkedin.com/in/salah-eddine-jaouad-231412395/",
     github: "https://github.com/jaouad4",
     description: "Passionate about digital security, fraud prevention, and innovative cybersecurity solutions. Currently pursuing Engineering in Cybersecurity & Digital Trust with hands-on experience in threat detection and risk management."
 };
@@ -84,7 +48,7 @@ window.education = [
         degree: "Engineering Cycle in Cybersecurity & Digital Trust",
         institution: "Ecole Normale Supérieure de l'Enseignement Technique (ENSET)",
         location: "Mohammedia, Morocco",
-        period: "2024 – Present",
+        period: "2023 – Present",
         focus: "Digital Trust, Risk Management, Security Frameworks"
     },
     {
@@ -105,40 +69,50 @@ window.education = [
 
 window.experience = [
     {
-        title: "Cybersecurity Research Intern",
-        company: "Centre Hospitalier Universitaire Mohammed VI",
-        location: "Oujda, Morocco",
-        period: "July 2024 – August 2024",
-        responsibilities: [
-            "Conducted comprehensive risk assessment for healthcare infrastructure security",
-            "Analyzed potential security vulnerabilities in hospital systems",
-            "Developed recommendations for risk mitigation and security enhancement",
-            "Collaborated with IT teams to implement security best practices"
-        ]
-    },
-    {
-        title: "IT Security Intern",
+        title: "Cybersecurity Intern - SIEM & SOAR Implementation",
         company: "Technologica SARL",
         location: "Oujda, Morocco",
-        period: "April 2023 – June 2023",
-        responsibilities: [
-            "Managed Windows Server 2019 security configurations and policies",
-            "Monitored network access controls and user permission management",
-            "Implemented security protocols for file and resource access",
-            "Conducted security audits and compliance assessments"
-        ]
+        period: "July - August 2025",
+        achievements: [
+            "Deployed and configured a SIEM solution with Wazuh for real-time threat detection and analysis",
+            "Implemented a SOAR platform with TheHive for incident response orchestration and automation"
+        ],
+        technologies: ["Wazuh", "TheHive", "SIEM", "SOAR", "Incident Response"]
     },
     {
-        title: "Network Security Analyst Intern",
-        company: "Moroccan Customs & Excise Administration (ADII)",
+        title: "Cybersecurity Intern - Basic Security Audit",
+        company: "University Hospital Center CHU Mohammed VI",
         location: "Oujda, Morocco",
-        period: "June 2022 – July 2022",
-        responsibilities: [
-            "Performed comprehensive network security analysis for government entity",
-            "Evaluated digitization processes for security compliance",
-            "Assessed internal applications for potential vulnerabilities",
-            "Prepared security assessment reports and recommendations"
-        ]
+        period: "July - August 2024",
+        achievements: [
+            "Created a comprehensive mapping of hospital information systems including patient records and management systems",
+            "Identified vulnerabilities such as weak passwords and unsecured access points",
+            "Analyzed compliance with Moroccan law n°09-08 standards and data protection regulations"
+        ],
+        technologies: ["Security Audit", "Risk Assessment", "Compliance", "Network Mapping"]
+    },
+    {
+        title: "IT Intern - Windows Server Resource Management",
+        company: "Technologica SARL",
+        location: "Oujda, Morocco",
+        period: "April - June 2023",
+        achievements: [
+            "Managed IT infrastructure on Windows Server 2019",
+            "Administered Active Directory: user administration, permission management, and security groups",
+            "Managed shared folders and network resources"
+        ],
+        technologies: ["Windows Server 2019", "Active Directory", "Group Policy", "File Server"]
+    },
+    {
+        title: "IT Intern - Network Analysis and Digitization",
+        company: "Customs and Indirect Taxes Administration (ADII)",
+        location: "Oujda, Morocco",
+        period: "June - July 2022",
+        achievements: [
+            "Analyzed the local area network of the prefectural directorate",
+            "Studied digitization processes and internal applications"
+        ],
+        technologies: ["Network Analysis", "System Documentation"]
     }
 ];
 
@@ -266,7 +240,7 @@ window.achievements = [
     },
     {
         title: "Zero Security Incidents",
-        description: "Maintained perfect security record during VoIP infrastructure deployment",
+        description: "Maintained perfect security record throughout API security platform deployment",
         category: "Security Excellence",
         year: "2024"
     },

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salah-Eddine JAOUAD - Cybersecurity Engineer</title>
+    <title>Salah-Eddine JAOUAD</title>
     <meta name="description" content="Cybersecurity Engineer specializing in fraud detection, risk assessment, and digital security solutions.">
     <meta name="keywords" content="cybersecurity, engineer, fraud detection, network security, Morocco">
     <meta name="author" content="Salah-Eddine JAOUAD">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,8 +32,9 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#resume">Resume</a></li>
-            <li><a href="#checklist">Checklist</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#activities">Activities</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -50,10 +51,9 @@
             </div>
             <div class="hero-text">
                 <h1 class="hero-title">Salah-Eddine JAOUAD</h1>
-                <h2 class="hero-subtitle">Cybersecurity Engineer</h2>
+                <h2 class="hero-subtitle">Cybersecurity & Digital Trust Engineer</h2>
                 <p class="hero-description">
-                    Passionate about digital security, fraud prevention, and innovative cybersecurity solutions. 
-                    Currently pursuing Engineering in Cybersecurity & Digital Trust with hands-on experience in threat detection and risk management.
+                    Cybersecurity Engineering student with hands-on experience in SIEM/SOAR implementation, security auditing, and threat detection. Proficient in deploying security platforms, vulnerability assessment, intrusion detection systems, and incident response automation. Certified in multiple cybersecurity domains with strong programming and problem-solving skills.
                 </p>
                 <div class="cta-buttons">
                     <a href="#resume" class="btn btn-primary">
@@ -76,120 +76,81 @@
         <div class="resume-cards">
             <div class="resume-card">
                 <div class="card-icon">
-                    <i class="fas fa-file-alt"></i>
+                    <i class="fas fa-globe"></i>
                 </div>
-                <h3>ATS-Friendly Resume</h3>
-                <p>Clean, professional resume optimized for Applicant Tracking Systems with all essential information clearly presented.</p>
-                <a href="#" class="download-btn" onclick="downloadResume('ats')">
-                    <i class="fas fa-download"></i>
-                    Download PDF
-                </a>
+                <h3>Resume (English)</h3>
+                <p>English resume tailored for international cybersecurity roles.</p>
+                <div class="resume-card-actions">
+                    <a href="#" class="download-btn" onclick="downloadResume('resume-en')">
+                        <i class="fas fa-download"></i>
+                        Download PDF
+                    </a>
+                    <a href="#" class="view-btn" onclick="openPDFInNewTab('assets/documents/resumes/Resume.pdf')">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Online
+                    </a>
+                </div>
             </div>
-            
+
             <div class="resume-card">
                 <div class="card-icon">
-                    <i class="fas fa-user-cog"></i>
+                    <i class="fas fa-language"></i>
                 </div>
-                <h3>Customized Resume</h3>
-                <p>Tailored resume specifically aligned with cybersecurity consultant roles and fraud prevention positions.</p>
-                <a href="#" class="download-btn" onclick="downloadResume('customized')">
-                    <i class="fas fa-download"></i>
-                    Download PDF
-                </a>
+                <h3>Resume (French)</h3>
+                <p>French version prepared for francophone employers and opportunities.</p>
+                <div class="resume-card-actions">
+                    <a href="#" class="download-btn" onclick="downloadResume('resume-fr')">
+                        <i class="fas fa-download"></i>
+                        Télécharger PDF
+                    </a>
+                    <a href="#" class="view-btn" onclick="openPDFInNewTab('assets/documents/resumes/Resume (French Version).pdf')">
+                        <i class="fas fa-external-link-alt"></i>
+                        Ouvrir en ligne
+                    </a>
+                </div>
             </div>
-            
-            <div class="resume-card">
-                <div class="card-icon">
-                    <i class="fas fa-envelope-open-text"></i>
+        </div>
+
+        <div class="skills-overview">
+            <h3 class="skills-title">Technical Skills</h3>
+            <div class="skill-category-grid">
+                <div class="skill-category">
+                    <h4><i class="fas fa-shield-alt"></i> Cybersecurity &amp; Cryptography</h4>
+                    <p>Network/System security, risk management, secure architecture, cryptographic algorithms, blockchain, ethical hacking</p>
                 </div>
-                <h3>Cover Letter</h3>
-                <p>Professional cover letter template customized for cybersecurity positions at leading financial institutions.</p>
-                <a href="#" class="download-btn" onclick="downloadResume('cover')">
-                    <i class="fas fa-download"></i>
-                    Download PDF
-                </a>
+                <div class="skill-category">
+                    <h4><i class="fas fa-server"></i> Systems &amp; Virtualization</h4>
+                    <p>Windows Server administration (Active Directory), Linux administration, shell scripting</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-network-wired"></i> Networks &amp; Telecommunications</h4>
+                    <p>IP addressing, subnetting, VLAN, Cisco routing/switching</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-code"></i> Programming Languages</h4>
+                    <p>C, C++, Python, Java, OOP, data structures</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-globe"></i> Web Development &amp; APIs</h4>
+                    <p>HTML, CSS, JavaScript, PHP, Node.js, web application security</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-toolbox"></i> Tools &amp; Frameworks</h4>
+                    <p>Spring Boot, Spring Security, React, Wazuh, TheHive, Wireshark, Zeek, Metasploit, YARA</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-bullseye"></i> Areas of Interest</h4>
+                    <p>Intrusion detection, SIEM/SOAR, EDR/XDR, network analysis, secure development</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-users"></i> Soft Skills</h4>
+                    <p>Problem-solving, self-learning, presentation, adaptability, teamwork</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Checklist Section -->
-    <section id="checklist" class="section">
-        <h2 class="section-title">Career Preparation Checklist</h2>
-        
-        <div class="checklist-container" id="checklist-container">
-            <!-- Checklist items will be populated by JavaScript -->
-        </div>
-        
-        <!-- Hidden Job Market Mind Map Section -->
-        <div class="mindmap-showcase">
-            <h3 class="mindmap-showcase-title">
-                <i class="fas fa-sitemap"></i>
-                Hidden Job Market Strategy
-            </h3>
-            <div class="mindmap-showcase-content">
-                <div class="mindmap-image-container">
-                    <img src="assets/images/activities/Hidden Job Market Mind Map.png" alt="Hidden Job Market Mind Map" class="mindmap-showcase-image">
-                </div>
-                <div class="mindmap-details">
-                    <h4>Understanding the Hidden Job Market</h4>
-                    <p>The hidden job market represents approximately <strong>80% of all job opportunities</strong> that are never publicly advertised. This comprehensive mind map reveals strategic approaches to access these opportunities through networking, industry connections, and proactive career development.</p>
-                    
-                    <div class="mindmap-insights">
-                        <div class="insight-item">
-                            <div class="insight-icon">
-                                <i class="fas fa-chart-pie"></i>
-                            </div>
-                            <div class="insight-content">
-                                <h5>Market Statistics</h5>
-                                <p><strong>80%</strong> of jobs never advertised publicly</p>
-                            </div>
-                        </div>
-                        
-                        <div class="insight-item">
-                            <div class="insight-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="insight-content">
-                                <h5>Networking Power</h5>
-                                <p><strong>85%</strong> of positions filled through connections</p>
-                            </div>
-                        </div>
-                        
-                        <div class="insight-item">
-                            <div class="insight-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="insight-content">
-                                <h5>Digital Platforms</h5>
-                                <p><strong>LinkedIn</strong> #1 professional networking tool</p>
-                            </div>
-                        </div>
-                        
-                        <div class="insight-item">
-                            <div class="insight-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                            <div class="insight-content">
-                                <h5>Industry Events</h5>
-                                <p><strong>Direct access</strong> to hiring managers</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mindmap-actions">
-                        <a href="#" class="btn btn-primary" onclick="openModal('mindmap-modal')">
-                            <i class="fas fa-eye"></i>
-                            View Detailed Analysis
-                        </a>
-                        <a href="assets/images/activities/Hidden Job Market Mind Map.png" target="_blank" class="btn btn-secondary">
-                            <i class="fas fa-external-link-alt"></i>
-                            Open Full Size
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Projects Section -->
     <section id="projects" class="section">
@@ -197,6 +158,81 @@
         
         <div class="projects-grid" id="projects-grid">
             <!-- Projects will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="certifications-grid">
+            <div class="certification-card">
+                <div class="certification-icon" aria-hidden="true">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Cisco</h3>
+                <ul class="certification-list">
+                    <li><i class="fas fa-circle-check"></i> Networking Essentials</li>
+                    <li><i class="fas fa-circle-check"></i> Introduction to IoT</li>
+                    <li><i class="fas fa-circle-check"></i> NDG Linux Essentials &amp; Linux Unhatched</li>
+                    <li><i class="fas fa-circle-check"></i> CyberOps Associate</li>
+                    <li><i class="fas fa-circle-check"></i> English for IT (1 &amp; 2)</li>
+                </ul>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon" aria-hidden="true">
+                    <i class="fas fa-shield-halved"></i>
+                    <i class="fab fa-redhat"></i>
+                </div>
+                <h3>Linux &amp; Security</h3>
+                <ul class="certification-list">
+                    <li><i class="fas fa-circle-check"></i> Huawei HCIA-Security V4.0</li>
+                    <li><i class="fas fa-circle-check"></i> RedHat RH104 / RH124 / RH134</li>
+                </ul>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon" aria-hidden="true">
+                    <i class="fas fa-cubes"></i>
+                </div>
+                <h3>Blockchain</h3>
+                <ul class="certification-list">
+                    <li><i class="fas fa-circle-check"></i> Linux Foundation LFS170: Blockchain for Business</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="section">
+        <h2 class="section-title">Extracurricular Activities</h2>
+
+        <div class="activities-grid">
+            <article class="activity-card">
+                <div class="activity-image">
+                    <img src="assets/images/activities/enset-representative.jpg" alt="ENSET Mohammédia Representative" onerror="this.style.display='none'">
+                </div>
+                <div class="activity-content">
+                    <h3>ENSET Mohammédia Representative</h3>
+                    <p class="activity-location"><i class="fas fa-map-marker-alt"></i> El Jadida, Morocco</p>
+                    <p class="activity-description">Active participation in an academic orientation forum at Lycée Technique Errazi to present ENSET.</p>
+                </div>
+            </article>
+
+            <article class="activity-card">
+                <div class="activity-image">
+                    <img src="assets/images/activities/gitex-africa-2025.jpg" alt="GITEX Africa 2025 Visitor" onerror="this.style.display='none'">
+                </div>
+                <div class="activity-content">
+                    <h3>GITEX Africa 2025 Visitor</h3>
+                    <p class="activity-location"><i class="fas fa-map-marker-alt"></i> Marrakech, Morocco</p>
+                    <ul class="activity-highlights">
+                        <li>Explored booths of numerous national and international companies.</li>
+                        <li>Attended specialized conferences on innovation and cybersecurity.</li>
+                    </ul>
+                </div>
+            </article>
         </div>
     </section>
 
