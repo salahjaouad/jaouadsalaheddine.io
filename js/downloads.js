@@ -85,7 +85,7 @@ CONTACT INFORMATION
 Email: salahjd16@gmail.com
 Phone: +212 697-714161
 Address: 39, Med Kahouaji, Hay Al Mostakbal, Oujda, Morocco
-LinkedIn: linkedin.com/in/jaouad.salaheddine
+LinkedIn: linkedin.com/in/salah-eddine-jaouad
 GitHub: github.com/jaouad4
 
 PROFESSIONAL SUMMARY
@@ -213,7 +213,7 @@ Cybersecurity Engineer
 CONTACT INFORMATION
 Email: salahjd16@gmail.com
 Phone: +212 697-714161
-LinkedIn: linkedin.com/in/jaouad.salaheddine
+LinkedIn: linkedin.com/in/salah-eddine-jaouad
 GitHub: github.com/jaouad4
 
 PROJECT PORTFOLIO

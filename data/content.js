@@ -8,7 +8,7 @@ window.personalInfo = {
     email: "salahjd16@gmail.com",
     phone: "+212 697-714161",
     location: "Oujda, Morocco",
-    linkedin: "https://www.linkedin.com/in/salah-eddine-jaouad-231412395/",
+    linkedin: "https://www.linkedin.com/in/salah-eddine-jaouad/",
     github: "https://github.com/jaouad4",
     description: "Passionate about digital security, fraud prevention, and innovative cybersecurity solutions. Currently pursuing Engineering in Cybersecurity & Digital Trust with hands-on experience in threat detection and risk management."
 };
